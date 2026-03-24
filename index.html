@@ -25,18 +25,13 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--white);font-family:'Barlow',sans-serif;min-height:100vh;overflow-x:hidden;}
-
-/* BG */
 .bg-layer{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
 .bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,241,53,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,241,53,.025) 1px,transparent 1px);background-size:48px 48px;}
 .bg-orb{position:absolute;border-radius:50%;filter:blur(100px);}
 .orb-a{width:600px;height:600px;background:var(--lime);top:-200px;right:-200px;opacity:.1;animation:drift 12s ease-in-out infinite alternate;}
 .orb-b{width:400px;height:400px;background:#4f46e5;bottom:-100px;left:-150px;opacity:.1;animation:drift 15s ease-in-out infinite alternate-reverse;}
 @keyframes drift{from{transform:translate(0,0);}to{transform:translate(30px,20px);}}
-
 .wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:48px 24px 100px;}
-
-/* HERO */
 .hero{margin-bottom:48px;animation:fadeDown .7s cubic-bezier(.16,1,.3,1) both;}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,241,53,.08);border:1px solid rgba(200,241,53,.2);border-radius:100px;padding:6px 14px;font-size:11px;font-weight:600;color:var(--lime);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
 .pulse{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);animation:blink 1.5s ease infinite;}
@@ -46,30 +41,7 @@ body{background:var(--bg);color:var(--white);font-family:'Barlow',sans-serif;min
 .hero-title .l2{display:block;background:linear-gradient(135deg,var(--lime) 0%,#7fff00 50%,var(--lime2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(200,241,53,.4));}
 .hero-sub{font-size:15px;color:var(--muted2);font-weight:400;line-height:1.6;max-width:420px;}
 .hero-sub strong{color:var(--white);font-weight:600;}
-
-/* CARD */
 .card{background:var(--s1);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
-.card+.card{margin-top:12px;}
-
-/* API */
-
-.api-inner{padding:20px 24px;}
-.api-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-.api-title{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);}
-.conn-pill{display:flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:600;transition:all .3s;background:rgba(90,90,114,.2);border:1px solid rgba(90,90,114,.3);color:var(--muted2);}
-.conn-pill.on{background:rgba(200,241,53,.1);border-color:rgba(200,241,53,.3);color:var(--lime);}
-.conn-dot{width:6px;height:6px;border-radius:50%;background:currentColor;transition:all .3s;}
-.conn-pill.on .conn-dot{box-shadow:0 0 8px currentColor;animation:blink 1.5s ease infinite;}
-.api-input-row{display:flex;gap:8px;}
-.inp{flex:1;background:var(--s2);border:1.5px solid var(--border);border-radius:12px;padding:12px 16px;font-size:14px;font-family:'Barlow',sans-serif;color:var(--white);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;}
-.inp::placeholder{color:var(--muted);}
-.inp:focus{border-color:var(--lime2);box-shadow:0 0 0 3px rgba(200,241,53,.08);}
-.btn-save{background:var(--s2);border:1.5px solid var(--border2);border-radius:12px;padding:12px 20px;font-size:13px;font-family:'Barlow',sans-serif;font-weight:700;color:var(--white);cursor:pointer;transition:all .2s;white-space:nowrap;}
-.btn-save:hover{border-color:var(--lime);color:var(--lime);background:rgba(200,241,53,.05);}
-.api-hint{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.5;}
-.api-hint a{color:var(--blue);text-decoration:none;}
-
-/* STEPPER */
 .stepper-wrap{animation:fadeUp .7s cubic-bezier(.16,1,.3,1) .1s both;}
 .step-header{padding:24px 28px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .step-dots{display:flex;align-items:center;gap:6px;}
@@ -78,15 +50,11 @@ body{background:var(--bg);color:var(--white);font-family:'Barlow',sans-serif;min
 .sd.done{background:rgba(200,241,53,.4);}
 .step-lbl{font-size:12px;color:var(--muted2);font-weight:500;white-space:nowrap;}
 .step-lbl span{color:var(--lime);font-weight:700;}
-
-/* PANELS */
 .step-panel{display:none;padding:28px;}
 .step-panel.active{display:block;animation:fadeIn .35s ease both;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .panel-title{font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-.3px;}
 .panel-sub{font-size:13.5px;color:var(--muted2);margin-bottom:28px;line-height:1.5;}
-
-/* FIELDS */
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 @media(max-width:480px){.fgrid{grid-template-columns:1fr;}}
 .ffull{grid-column:1/-1;}
@@ -97,8 +65,6 @@ body{background:var(--bg);color:var(--white);font-family:'Barlow',sans-serif;min
 .finp:focus{border-color:var(--lime2);box-shadow:0 0 0 3px rgba(200,241,53,.08);}
 select.finp{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1.5l6 6 6-6' stroke='%235a5a72' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;}
 select.finp option{background:#1e1e30;}
-
-/* OPTION CARDS */
 .ogrid{display:grid;gap:10px;}
 .ogrid.c3{grid-template-columns:repeat(3,1fr);}
 .ogrid.c2{grid-template-columns:repeat(2,1fr);}
@@ -111,8 +77,6 @@ select.finp option{background:#1e1e30;}
 .ocard.sel .oname{color:var(--lime);}
 .ochk{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;font-size:10px;color:#000;opacity:0;transition:all .2s;font-weight:900;transform:scale(.5);}
 .ocard.sel .ochk{opacity:1;transform:scale(1);}
-
-/* NAV */
 .nav-row{display:flex;gap:10px;padding:0 28px 28px;}
 .btn-back,.btn-next,.btn-gen{border:none;border-radius:14px;padding:15px 28px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;justify-content:center;gap:8px;}
 .btn-next{flex:1;background:var(--lime);color:#000;box-shadow:0 6px 24px rgba(200,241,53,.25);}
@@ -122,12 +86,8 @@ select.finp option{background:#1e1e30;}
 .btn-gen{flex:1;background:linear-gradient(135deg,var(--lime) 0%,#a8ff3e 50%,var(--lime2) 100%);color:#000;font-size:16px;letter-spacing:1px;box-shadow:0 8px 32px rgba(200,241,53,.3);text-transform:uppercase;}
 .btn-gen:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(200,241,53,.5);}
 .btn-gen:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none;}
-
-/* ERROR */
 .err-box{margin:0 0 12px;background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.2);border-radius:14px;padding:14px 18px;color:#ff8a96;font-size:13.5px;line-height:1.6;display:none;}
 .err-box.show{display:block;animation:fadeIn .3s ease both;}
-
-/* LOADING */
 .load-wrap{display:none;padding:72px 28px;text-align:center;}
 .load-wrap.show{display:block;animation:fadeIn .4s ease both;}
 .rings{position:relative;width:80px;height:80px;margin:0 auto 28px;}
@@ -144,8 +104,6 @@ select.finp option{background:#1e1e30;}
 .lstep.active{color:var(--white);background:rgba(200,241,53,.07);border:1px solid rgba(200,241,53,.15);}
 .ldot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:all .4s;}
 .lstep.active .ldot{background:var(--lime);box-shadow:0 0 8px var(--lime);animation:blink 1s ease infinite;}
-
-/* RESULT */
 .result-wrap{display:none;}
 .result-wrap.show{display:block;animation:fadeUp .6s cubic-bezier(.16,1,.3,1) both;}
 .r-hero{background:linear-gradient(160deg,var(--s2) 0%,rgba(200,241,53,.04) 100%);border-radius:20px;border:1px solid var(--border);padding:32px 28px;margin-bottom:12px;position:relative;overflow:hidden;}
@@ -162,97 +120,67 @@ select.finp option{background:#1e1e30;}
 .rsec:hover{border-color:var(--border2);}
 .rsec-head{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;}
 .rsec-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.il{background:rgba(200,241,53,.1);} .ib{background:rgba(79,172,254,.1);} .io{background:rgba(255,107,53,.1);} .ip{background:rgba(167,139,250,.1);} .ipk{background:rgba(251,113,133,.1);}
+.il{background:rgba(200,241,53,.1);}.ib{background:rgba(79,172,254,.1);}.io{background:rgba(255,107,53,.1);}.ip{background:rgba(167,139,250,.1);}.ipk{background:rgba(251,113,133,.1);}
 .rsec-title{font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted2);}
 .rsec-body{padding:20px 22px;font-size:14.5px;line-height:1.8;color:rgba(244,244,248,.85);font-weight:400;}
 .rsec-body strong{color:var(--lime);font-weight:700;}
 .rsec-body em{color:#93c5fd;font-style:normal;}
 .btn-reset{width:100%;background:transparent;border:1.5px solid var(--border2);border-radius:14px;padding:14px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:700;color:var(--muted2);cursor:pointer;transition:all .2s;margin-top:12px;}
 .btn-reset:hover{border-color:var(--lime);color:var(--lime);background:rgba(200,241,53,.04);}
-
-/* FOOTER */
-.footer{text-align:center;font-size:11.5px;color:var(--muted);margin-top:40px;line-height:1.7;animation:fadeUp .7s cubic-bezier(.16,1,.3,1) .3s both;}
-
-/* ANIM */
+.footer{text-align:center;font-size:11.5px;color:var(--muted);margin-top:40px;line-height:1.7;}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-24px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--s3);border-radius:3px;}
 </style>
 </head>
 <body>
-
-<div class="bg-layer">
-  <div class="bg-grid"></div>
-  <div class="bg-orb orb-a"></div>
-  <div class="bg-orb orb-b"></div>
-</div>
-
+<div class="bg-layer"><div class="bg-grid"></div><div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div></div>
 <div class="wrap">
-
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-badge"><span class="pulse"></span> AI-Powered · Free · Personalized</div>
-    <h1 class="hero-title">
-      <span class="l1">FIT</span>
-      <span class="l2">GENIE</span>
-    </h1>
+    <h1 class="hero-title"><span class="l1">FIT</span><span class="l2">GENIE</span></h1>
     <p class="hero-sub">Tera <strong>personal AI trainer</strong> — gym trainer jaisi advice, <strong>bilkul free</strong> mein. Sirf tere liye.</p>
   </div>
-
-
-
-  <!-- ERROR -->
   <div class="err-box" id="errBox"></div>
-
-  <!-- FORM -->
   <div class="stepper-wrap" id="formWrap">
     <div class="card">
       <div class="step-header">
-        <div class="step-dots" id="stepDots">
-          <div class="sd active"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div>
-        </div>
+        <div class="step-dots"><div class="sd active"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div>
         <div class="step-lbl">Step <span id="stepNum">1</span> of 4</div>
       </div>
-
-      <!-- S1: Info -->
       <div class="step-panel active" id="s0">
         <div class="panel-title">👋 Pehle Bata Apne Baare Mein</div>
         <div class="panel-sub">Basic details — ekdum simple!</div>
         <div class="fgrid">
-          <div class="field ffull"><div class="flabel">Tera Naam</div><input class="finp" type="text" id="f_name" placeholder="e.g. Rahul, Priya..." /></div>
+          <div class="field ffull"><div class="flabel">Tera Naam</div><input class="finp" type="text" id="f_name" placeholder="e.g. Rahul, Priya..."/></div>
           <div class="field"><div class="flabel">Umar (Saal)</div><input class="finp" type="number" id="f_age" placeholder="e.g. 16" min="10" max="70"/></div>
           <div class="field"><div class="flabel">Gender</div><select class="finp" id="f_gender"><option value="">Select karo</option><option>Male</option><option>Female</option><option>Other</option></select></div>
           <div class="field"><div class="flabel">Height (cm)</div><input class="finp" type="number" id="f_height" placeholder="e.g. 168" min="100" max="230"/></div>
           <div class="field"><div class="flabel">Weight (kg)</div><input class="finp" type="number" id="f_weight" placeholder="e.g. 60" min="30" max="200"/></div>
         </div>
       </div>
-
-      <!-- S2: Goal -->
       <div class="step-panel" id="s1">
         <div class="panel-title">🎯 Kya Paana Chahta Hai?</div>
-        <div class="panel-sub">Ek goal choose karo — isi ke hisaab se tera plan banega!</div>
+        <div class="panel-sub">Ek goal choose karo!</div>
         <div class="ogrid c3">
           <div class="ocard" onclick="pick(this,'goal','Weight Loss')"><div class="ochk">✓</div><span class="oicon">🔥</span><div class="oname">Weight Loss</div></div>
           <div class="ocard" onclick="pick(this,'goal','Muscle Gain')"><div class="ochk">✓</div><span class="oicon">💪</span><div class="oname">Muscle Gain</div></div>
           <div class="ocard" onclick="pick(this,'goal','Fit & Healthy')"><div class="ochk">✓</div><span class="oicon">⚡</span><div class="oname">Fit & Healthy</div></div>
           <div class="ocard" onclick="pick(this,'goal','Stamina Boost')"><div class="ochk">✓</div><span class="oicon">🏃</span><div class="oname">Stamina</div></div>
           <div class="ocard" onclick="pick(this,'goal','Height Growth')"><div class="ochk">✓</div><span class="oicon">📏</span><div class="oname">Height</div></div>
-          <div class="ocard" onclick="pick(this,'goal','Stress Relief & Wellness')"><div class="ochk">✓</div><span class="oicon">🧘</span><div class="oname">Wellness</div></div>
+          <div class="ocard" onclick="pick(this,'goal','Stress Relief')"><div class="ochk">✓</div><span class="oicon">🧘</span><div class="oname">Wellness</div></div>
         </div>
       </div>
-
-      <!-- S3: Equipment -->
       <div class="step-panel" id="s2">
         <div class="panel-title">🏋️ Kya Available Hai?</div>
-        <div class="panel-sub">Equipment aur activity level bata — realistic plan banega!</div>
+        <div class="panel-sub">Equipment aur activity level bata!</div>
         <div class="flabel" style="margin-bottom:10px;">Equipment</div>
         <div class="ogrid c2" style="margin-bottom:22px;">
-          <div class="ocard" onclick="pick(this,'equip','No Equipment – Body weight only')"><div class="ochk">✓</div><span class="oicon">🏠</span><div class="oname">No Equipment</div></div>
+          <div class="ocard" onclick="pick(this,'equip','No Equipment')"><div class="ochk">✓</div><span class="oicon">🏠</span><div class="oname">No Equipment</div></div>
           <div class="ocard" onclick="pick(this,'equip','Dumbbells at home')"><div class="ochk">✓</div><span class="oicon">🏋️</span><div class="oname">Dumbbells</div></div>
           <div class="ocard" onclick="pick(this,'equip','Full Gym access')"><div class="ochk">✓</div><span class="oicon">🏟️</span><div class="oname">Full Gym</div></div>
-          <div class="ocard" onclick="pick(this,'equip','Outdoor park or ground')"><div class="ochk">✓</div><span class="oicon">🌳</span><div class="oname">Outdoor</div></div>
+          <div class="ocard" onclick="pick(this,'equip','Outdoor park')"><div class="ochk">✓</div><span class="oicon">🌳</span><div class="oname">Outdoor</div></div>
         </div>
-        <div class="field"><div class="flabel">Activity Level Abhi Ka</div>
+        <div class="field"><div class="flabel">Activity Level</div>
           <select class="finp" id="f_activity">
             <option value="">Kitna active hai?</option>
             <option>Bilkul inactive — sirf padhai/phone</option>
@@ -262,8 +190,6 @@ select.finp option{background:#1e1e30;}
           </select>
         </div>
       </div>
-
-      <!-- S4: Diet + Language -->
       <div class="step-panel" id="s3">
         <div class="panel-title">🍱 Diet aur Language</div>
         <div class="panel-sub">Khaana aur plan ki language — dono choose karo!</div>
@@ -280,31 +206,25 @@ select.finp option{background:#1e1e30;}
           <div class="ocard" onclick="pick(this,'lang','Hindi')"><div class="ochk">✓</div><span class="oicon">🕉️</span><div class="oname">Pure Hindi</div></div>
           <div class="ocard" onclick="pick(this,'lang','English')"><div class="ochk">✓</div><span class="oicon">🇬🇧</span><div class="oname">English</div></div>
         </div>
-        <div class="field"><div class="flabel">Koi Allergy? (Optional)</div><input class="finp" type="text" id="f_allergy" placeholder="e.g. dairy nahi khata... ya kuch nahi hai toh chod do" /></div>
+        <div class="field"><div class="flabel">Koi Allergy? (Optional)</div><input class="finp" type="text" id="f_allergy" placeholder="e.g. dairy nahi khata..."/></div>
       </div>
     </div>
-
-    <!-- NAV -->
     <div class="nav-row" id="navRow">
       <button class="btn-back" id="backBtn" onclick="prevStep()" style="display:none;">← Back</button>
       <button class="btn-next" id="nextBtn" onclick="nextStep()">Aage Jao →</button>
     </div>
   </div>
-
-  <!-- LOADING -->
   <div class="card load-wrap" id="loadWrap">
     <div class="rings"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="r-icon">💪</div></div>
     <div class="load-title">Plan Ban Raha Hai...</div>
     <div class="load-msg">AI teri details analyze kar raha hai</div>
     <div class="load-steps">
       <div class="lstep active" id="ls0"><div class="ldot"></div>Body analysis ho rahi hai</div>
-      <div class="lstep" id="ls1"><div class="ldot"></div>Workout plan design ho raha hai</div>
-      <div class="lstep" id="ls2"><div class="ldot"></div>Indian diet plan bana raha hai</div>
-      <div class="lstep" id="ls3"><div class="ldot"></div>Personal tips add ho rahi hain</div>
+      <div class="lstep" id="ls1"><div class="ldot"></div>Workout plan ban raha hai</div>
+      <div class="lstep" id="ls2"><div class="ldot"></div>Diet plan bana raha hai</div>
+      <div class="lstep" id="ls3"><div class="ldot"></div>Tips add ho rahi hain</div>
     </div>
   </div>
-
-  <!-- RESULT -->
   <div class="result-wrap" id="resultWrap">
     <div class="r-hero">
       <div class="r-eyebrow">Plan Ready</div>
@@ -314,150 +234,71 @@ select.finp option{background:#1e1e30;}
     <div class="r-secs" id="rSecs"></div>
     <button class="btn-reset" onclick="resetAll()">↩ Naya Plan Banao</button>
   </div>
-
-  <div class="footer">⚠️ FitGenie AI-generated plans deta hai — koi certified medical advice nahi hai.<br>Kisi bhi naye workout se pehle apni health zaroor consider karo.</div>
+  <div class="footer">⚠️ FitGenie AI-generated plans deta hai — koi medical advice nahi hai.</div>
 </div>
-
 <script>
-const apiKey = 'AIzaSyB99dofbQCnGAz4121ga9GioM5R8rsSDrU';
-let curStep = 0;
-let picks = {goal:'',equip:'',diet:'',lang:''};
-let lsTimer;
-
-window.onload = ()=>{ };
-function pick(el,grp,val){
-  el.closest('.ogrid').querySelectorAll('.ocard').forEach(c=>c.classList.remove('sel'));
-  el.classList.add('sel'); picks[grp]=val;
-}
-function showErr(msg){ const e=document.getElementById('errBox'); e.innerHTML='❌ '+msg; e.className='err-box show'; e.scrollIntoView({behavior:'smooth',block:'center'}); }
-function clearErr(){ document.getElementById('errBox').className='err-box'; }
-
+const apiKey='AIzaSyB99dofbQCnGAz4121ga9GioM5R8rsSDrU';
+let curStep=0,lsTimer;
+let picks={goal:'',equip:'',diet:'',lang:''};
+window.onload=()=>{};
+function pick(el,g,v){el.closest('.ogrid').querySelectorAll('.ocard').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');picks[g]=v;}
+function showErr(m){const e=document.getElementById('errBox');e.innerHTML='❌ '+m;e.className='err-box show';e.scrollIntoView({behavior:'smooth',block:'center'});}
+function clearErr(){document.getElementById('errBox').className='err-box';}
 function validate(){
   if(curStep===0){
-    const n=document.getElementById('f_name').value.trim();
-    const a=document.getElementById('f_age').value;
-    const h=document.getElementById('f_height').value;
-    const w=document.getElementById('f_weight').value;
-    const g=document.getElementById('f_gender').value;
-    if(!n) return 'Apna naam toh bata bhai! 😄';
-    if(!a||a<10||a>70) return 'Sahi umar daalo (10-70 ke beech)';
-    if(!h||h<100||h>230) return 'Sahi height daalo (100-230 cm)';
-    if(!w||w<30||w>200) return 'Sahi weight daalo (30-200 kg)';
-    if(!g) return 'Gender select karo!';
+    const n=document.getElementById('f_name').value.trim(),a=document.getElementById('f_age').value,h=document.getElementById('f_height').value,w=document.getElementById('f_weight').value,g=document.getElementById('f_gender').value;
+    if(!n)return'Apna naam toh bata bhai! 😄';
+    if(!a||a<10||a>70)return'Sahi umar daalo';
+    if(!h||h<100||h>230)return'Sahi height daalo';
+    if(!w||w<30||w>200)return'Sahi weight daalo';
+    if(!g)return'Gender select karo!';
   }
-  if(curStep===1&&!picks.goal) return 'Apna goal choose karo!';
-  if(curStep===2){ if(!picks.equip) return 'Equipment select karo!'; if(!document.getElementById('f_activity').value) return 'Activity level batao!'; }
-  if(curStep===3){ if(!picks.diet) return 'Diet preference choose karo!'; if(!picks.lang) return 'Plan ki language choose karo!'; }
+  if(curStep===1&&!picks.goal)return'Goal choose karo!';
+  if(curStep===2){if(!picks.equip)return'Equipment select karo!';if(!document.getElementById('f_activity').value)return'Activity level batao!';}
+  if(curStep===3){if(!picks.diet)return'Diet choose karo!';if(!picks.lang)return'Language choose karo!';}
   return null;
 }
-
-function nextStep(){
-  const e=validate(); if(e){ showErr(e); return; } clearErr();
-  if(curStep<3) goStep(curStep+1); else generate();
-}
-function prevStep(){ if(curStep>0) goStep(curStep-1); }
-
-function goStep(n){
-  document.getElementById('s'+curStep).classList.remove('active');
-  curStep=n;
-  document.getElementById('s'+curStep).classList.add('active');
-  updateUI();
-}
-
+function nextStep(){const e=validate();if(e){showErr(e);return;}clearErr();if(curStep<3)goStep(curStep+1);else generate();}
+function prevStep(){if(curStep>0)goStep(curStep-1);}
+function goStep(n){document.getElementById('s'+curStep).classList.remove('active');curStep=n;document.getElementById('s'+curStep).classList.add('active');updateUI();}
 function updateUI(){
-  document.querySelectorAll('.sd').forEach((d,i)=>{ d.className='sd'+(i===curStep?' active':(i<curStep?' done':'')); });
+  document.querySelectorAll('.sd').forEach((d,i)=>{d.className='sd'+(i===curStep?' active':(i<curStep?' done':''));});
   document.getElementById('stepNum').textContent=curStep+1;
   document.getElementById('backBtn').style.display=curStep>0?'':'none';
   const nb=document.getElementById('nextBtn');
-  if(curStep===3){
-    nb.style.display='none';
-    let gb=document.getElementById('genBtn');
-    if(!gb){ gb=document.createElement('button'); gb.id='genBtn'; gb.className='btn-gen'; gb.innerHTML='⚡ MERA PLAN BANAO'; gb.onclick=generate; document.getElementById('navRow').appendChild(gb); }
-    gb.style.display='';
-  } else {
-    nb.style.display=''; const gb=document.getElementById('genBtn'); if(gb) gb.style.display='none';
-  }
+  if(curStep===3){nb.style.display='none';let gb=document.getElementById('genBtn');if(!gb){gb=document.createElement('button');gb.id='genBtn';gb.className='btn-gen';gb.innerHTML='⚡ MERA PLAN BANAO';gb.onclick=generate;document.getElementById('navRow').appendChild(gb);}gb.style.display='';}
+  else{nb.style.display='';const gb=document.getElementById('genBtn');if(gb)gb.style.display='none';}
 }
-
-function animateLoad(){
-  let i=0; const ss=['ls0','ls1','ls2','ls3'];
-  ss.forEach(s=>document.getElementById(s).classList.remove('active'));
-  document.getElementById(ss[0]).classList.add('active');
-  lsTimer=setInterval(()=>{ if(i<ss.length-1){ document.getElementById(ss[i]).classList.remove('active'); i++; document.getElementById(ss[i]).classList.add('active'); } },1800);
-}
-function stopLoad(){ clearInterval(lsTimer); }
-
+function animateLoad(){let i=0;const ss=['ls0','ls1','ls2','ls3'];ss.forEach(s=>document.getElementById(s).classList.remove('active'));document.getElementById(ss[0]).classList.add('active');lsTimer=setInterval(()=>{if(i<ss.length-1){document.getElementById(ss[i]).classList.remove('active');i++;document.getElementById(ss[i]).classList.add('active');}},1800);}
+function stopLoad(){clearInterval(lsTimer);}
 async function generate(){
-
-  const name=document.getElementById('f_name').value.trim();
-  const age=document.getElementById('f_age').value;
-  const height=document.getElementById('f_height').value;
-  const weight=document.getElementById('f_weight').value;
-  const gender=document.getElementById('f_gender').value;
-  const activity=document.getElementById('f_activity').value;
-  const allergy=document.getElementById('f_allergy').value.trim();
-
+  const name=document.getElementById('f_name').value.trim(),age=document.getElementById('f_age').value,height=document.getElementById('f_height').value,weight=document.getElementById('f_weight').value,gender=document.getElementById('f_gender').value,activity=document.getElementById('f_activity').value,allergy=document.getElementById('f_allergy').value.trim();
   clearErr();
   document.getElementById('formWrap').style.display='none';
   document.getElementById('navRow').style.display='none';
   document.getElementById('loadWrap').className='card load-wrap show';
   animateLoad();
-
   const prompt=`You are FitGenie, a friendly AI fitness trainer for young Indian students.
-
 User: Name=${name}, Age=${age}, Gender=${gender}, Height=${height}cm, Weight=${weight}kg
 Goal: ${picks.goal}, Equipment: ${picks.equip}, Activity: ${activity}, Diet: ${picks.diet}
-Restrictions: ${allergy||'None'}
-
-Write a personalized 7-day fitness plan in Hinglish (Hindi+English mix). Be like a friendly dost. Simple words for a ${age}-year-old student.
-
-Respond ONLY in this exact HTML (no markdown, no backticks, no extra text outside HTML):
-
-<div class="rsec">
-<div class="rsec-head"><div class="rsec-icon il">📊</div><div class="rsec-title">Body Analysis</div></div>
-<div class="rsec-body">[Calculate BMI. Simple Hinglish explanation. Motivating tone. What their body type means. How achievable is their goal. 3-4 lines.]</div>
-</div>
-
-<div class="rsec">
-<div class="rsec-head"><div class="rsec-icon io">🏋️</div><div class="rsec-title">7-Din Workout Plan</div></div>
-<div class="rsec-body">[Day by day. Use <strong>Day 1 – Monday:</strong> format. Exercise names, sets x reps. Realistic for their equipment. Include rest days.]</div>
-</div>
-
-<div class="rsec">
-<div class="rsec-head"><div class="rsec-icon ib">🍱</div><div class="rsec-title">Indian Diet Plan</div></div>
-<div class="rsec-body">[Full day meals. Use <strong>Subah:</strong> <strong>Breakfast:</strong> <strong>Lunch:</strong> <strong>Snack:</strong> <strong>Dinner:</strong> format. Desi foods. Student budget friendly.]</div>
-</div>
-
-<div class="rsec">
-<div class="rsec-head"><div class="rsec-icon ip">💡</div><div class="rsec-title">Pro Tips for ${name}</div></div>
-<div class="rsec-body">[5 tips using • bullets. Sleep, water, recovery, mistakes to avoid, study-fitness balance.]</div>
-</div>
-
-<div class="rsec">
-<div class="rsec-head"><div class="rsec-icon ipk">🔥</div><div class="rsec-title">Message for ${name}</div></div>
-<div class="rsec-body">[4-5 line heartfelt personal message to ${name}. Tell what they can achieve in 30, 60, 90 days. Emotional and real. End with 🔥]</div>
-</div>`;
-
+Language: ${picks.lang}. Restrictions: ${allergy||'None'}
+Write a personalized 7-day fitness plan in ${picks.lang} language. Be friendly like a dost. Simple words for a ${age}-year-old.
+Respond ONLY in this exact HTML (no markdown, no backticks):
+<div class="rsec"><div class="rsec-head"><div class="rsec-icon il">📊</div><div class="rsec-title">Body Analysis</div></div><div class="rsec-body">[BMI calculate karo. Simple explanation. Motivating tone. 3-4 lines.]</div></div>
+<div class="rsec"><div class="rsec-head"><div class="rsec-icon io">🏋️</div><div class="rsec-title">7-Din Workout Plan</div></div><div class="rsec-body">[Day by day. Use <strong>Day 1 – Monday:</strong> format. Sets x reps. Include rest days.]</div></div>
+<div class="rsec"><div class="rsec-head"><div class="rsec-icon ib">🍱</div><div class="rsec-title">Indian Diet Plan</div></div><div class="rsec-body">[Use <strong>Subah:</strong> <strong>Breakfast:</strong> <strong>Lunch:</strong> <strong>Snack:</strong> <strong>Dinner:</strong> format. Desi foods. Budget friendly.]</div></div>
+<div class="rsec"><div class="rsec-head"><div class="rsec-icon ip">💡</div><div class="rsec-title">Pro Tips for ${name}</div></div><div class="rsec-body">[5 tips using • bullets. Sleep, water, recovery, common mistakes, study-fitness balance.]</div></div>
+<div class="rsec"><div class="rsec-head"><div class="rsec-icon ipk">🔥</div><div class="rsec-title">Message for ${name}</div></div><div class="rsec-body">[4-5 line personal motivation. 30/60/90 day goals. End with 🔥]</div></div>`;
   try{
-    const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:2000,temperature:0.85}})
-    });
+    const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{maxOutputTokens:2000,temperature:0.85}})});
     stopLoad();
-    if(!res.ok){
-      const e=await res.json();
-      if(res.status===400||res.status===403) throw new Error('API key galat hai — dobara check karo');
-      if(res.status===429) throw new Error('Too many requests — 1 minute ruko phir try karo');
-      throw new Error(e.error?.message||'Server error — dobara try karo');
-    }
+    if(!res.ok){const e=await res.json();if(res.status===429)throw new Error('Too many requests — 1 minute ruko phir try karo');throw new Error(e.error?.message||'Error aaya — dobara try karo');}
     const data=await res.json();
-    const raw=data.candidates?.[0]?.content?.parts?.[0]?.text||'';
-    const html=raw.replace(/```html|```/g,'').trim();
-    if(!html) throw new Error('AI ne response nahi diya — dobara try karo');
-
+    const html=(data.candidates?.[0]?.content?.parts?.[0]?.text||'').replace(/```html|```/g,'').trim();
+    if(!html)throw new Error('AI ne response nahi diya');
     document.getElementById('loadWrap').className='card load-wrap';
     document.getElementById('rName').textContent=name;
-    document.getElementById('rChips').innerHTML=`<span class="chip">🎯 ${picks.goal}</span><span class="chip">🏋️ ${picks.equip.split('–')[0].trim()}</span><span class="chip">🥗 ${picks.diet}</span><span class="chip">🌐 ${picks.lang}</span><span class="chip">📅 7-Day Plan</span>`;
+    document.getElementById('rChips').innerHTML=`<span class="chip">🎯 ${picks.goal}</span><span class="chip">🏋️ ${picks.equip}</span><span class="chip">🥗 ${picks.diet}</span><span class="chip">🌐 ${picks.lang}</span><span class="chip">📅 7-Day Plan</span>`;
     document.getElementById('rSecs').innerHTML=html;
     document.getElementById('resultWrap').className='result-wrap show';
     document.getElementById('resultWrap').scrollIntoView({behavior:'smooth',block:'start'});
@@ -469,18 +310,16 @@ Respond ONLY in this exact HTML (no markdown, no backticks, no extra text outsid
     showErr(err.message);
   }
 }
-
 function resetAll(){
-  curStep=0; picks={goal:'',equip:'',diet:'',lang:''};
+  curStep=0;picks={goal:'',equip:'',diet:'',lang:''};
   document.querySelectorAll('.ocard').forEach(c=>c.classList.remove('sel'));
-  document.querySelectorAll('.finp').forEach(i=>{ if(i.tagName==='SELECT') i.selectedIndex=0; else i.value=''; });
+  document.querySelectorAll('.finp').forEach(i=>{if(i.tagName==='SELECT')i.selectedIndex=0;else i.value='';});
   document.getElementById('resultWrap').className='result-wrap';
   document.getElementById('formWrap').style.display='';
   document.getElementById('navRow').style.display='';
-  const gb=document.getElementById('genBtn'); if(gb) gb.style.display='none';
+  const gb=document.getElementById('genBtn');if(gb)gb.style.display='none';
   document.getElementById('nextBtn').style.display='';
-  goStep(0);
-  window.scrollTo({top:0,behavior:'smooth'});
+  goStep(0);window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
 </body>
